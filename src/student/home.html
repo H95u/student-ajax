@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="student.js"></script>
+</head>
+<body onload="showAll()">
+<h1 style="text-align: center">Student Home</h1>
+<div class="container" style="text-align: center">
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myCreateStudentModal"
+            onclick="getAllSelectClass()">Create new Student
+    </button>
+    <hr>
+    <!-- Modal -->
+    <div class="modal fade" id="myCreateStudentModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Create student</h4>
+                </div>
+                <div class="modal-body">
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name">
+                    <hr>
+                    <label for="point">Point</label><br>
+                    <input type="text" id="point">
+                    <hr>
+                    <label for="age">Age</label><br>
+                    <input type="text" id="age">
+                    <hr>
+                    <label>Class</label><br>
+                    <div id="selectClass">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="addNewStudent()">Submit</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myUpdateStudentModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Update class</h4>
+            </div>
+            <div class="modal-body">
+                <label for="name">Name</label><br>
+                <input type="text" id="nameUpdate">
+                <hr>
+                <label for="point">Point</label><br>
+                <input type="text" id="pointUpdate">
+                <hr>
+                <label for="age">Age</label><br>
+                <input type="text" id="ageUpdate">
+                <hr>
+                <label>Class</label><br>
+                <div id="selectClassUpdate">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="updateStudent()">Submit</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="studentList"></div>
+<div style="text-align: center">
+    <a href="http://localhost:63342/test11/classes/classes.html?_ijt=brim4u8rvc58ucaqllbcvvdcc8&_ij_reload=RELOAD_ON_SAVE">Back
+        to Classes</a>
+</div>
+</body>
+</html>
